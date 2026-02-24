@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Simple Blockchain GUI</title>
+  </head>
+  <body>
+    <h1>Simple Blockchain</h1>
+    <h2>Add Transaction</h2>
+    <form action="/add_transaction" method="post">
+      <input type="text" name="sender" placeholder="Sender" required />
+      <input type="text" name="recipient" placeholder="Recipient" required />
+      <input type="text" name="amount" placeholder="Amount" required />
+      <button type="submit">Add Transaction</button>
+    </form>
+    <h2>Blockchain</h2>
+    <pre>{{ chain|tojson(indent=2) }}</pre>
+  </body>
+</html>

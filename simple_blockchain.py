@@ -38,7 +38,7 @@ class SimpleBlockchain:
             return True
      
     def is_valid_proof(self, block, block_hash):
-        return (block_hash.startswith('0' * Blockchain.difficulty) and block_hash == block.compute_hash())
+        return (block_hash.startswith('0' * self.difficulty) and block_hash == block.compute_hash())
     
     def add_new_transaction(self, transaction):
         self.unconfirmed_transactions.append(transaction)
